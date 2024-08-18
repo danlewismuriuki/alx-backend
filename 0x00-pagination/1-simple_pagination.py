@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
 import csv
-import math
-from typing import List
+from typing import List, Tuple
 
 """
 Adds `get_page` method to `Server` class
@@ -28,7 +27,8 @@ class Server:
 
         return self.__dataset
 
-    def index_range(self, page, page_size) -> tuple:
+    @staticmethod
+    def index_range(self, page, page_size) -> Tuple[int, int]:
         """function should return a tuple of size two
         containing a start index and an end index
         """
@@ -42,6 +42,5 @@ class Server:
         """
         assert type(page) == int and type(page_size) == int
         assert page > 0 and page_size > 0
-
         startIndex, endIndex = self.index_range(page, page_size)
         return self.dataset()[startIndex:endIndex]

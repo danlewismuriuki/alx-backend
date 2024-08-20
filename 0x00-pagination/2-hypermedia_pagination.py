@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
-import csv
-import math
-from typing import List, Tuple
 
 """
 Adds `get_page` method to `Server` class
 """
+
+import csv
+import math
+from typing import List, Tuple
 
 
 class Server:

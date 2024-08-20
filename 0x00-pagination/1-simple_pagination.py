@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
-import csv
-from typing import List, Tuple
-
 """
 Adds `get_page` method to `Server` class
 """
+
+
+import csv
+from typing import List, Tuple
 
 
 class Server:
@@ -45,8 +46,8 @@ class Server:
             dataset into smaller, more manageable pages.
 
         Args:
-            page (int): The page number to retrieve. Must be a 
-            positive integer. Defaults to 1.
+            page (int): The page number to retrieve. Must be a
+                positive integer. Defaults to 1.
             page_size (int): The number of items per page.
                 Must be a positive integer. Defaults to 10.
 

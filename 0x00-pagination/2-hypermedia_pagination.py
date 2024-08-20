@@ -47,8 +47,47 @@ class Server:
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         """
-        Retrieve a page of items with additional pagination metadata.
-        """
+        Retrieve a page of items with additional
+            pagination metadata.
+
+        This method retrieves a specific page of data from
+            the dataset, along with
+        metadata that provides information about the
+            pagination state. It is useful
+        for implementing paginated views of a dataset, where
+            users can navigate
+        through pages of data.
+
+        Args:
+            page (int): The page number to retrieve.
+                defaults to 1.
+            page_size (int): The number of items per page.
+                Defaults to 10.
+
+        Returns:
+            dict: A dictionary containing the following key-value pairs:
+                - "page_size" (int): The number of items on the current page.
+                - "page" (int): The current page number.
+                - "data" (List[List]): The list of items on the current page.
+                - "next_page" (Optional[int]): The page number of the
+                next page, or None if this is the last page.
+                - "prev_page" (Optional[int]): The page number of the
+                previous page,
+                or None if this is the first page.
+                - "total_pages" (int): The total number of pages available.
+
+        Raises:
+            AssertionError: If the page or page_size
+                arguments are invalid.
+
+        Example:
+            If you have a dataset with 100 items and request
+                page 2 with a page_size of 10,
+            this method will return a dictionary with the items
+                from index 10 to 19, along with
+            metadata about the pagination state.
+            """
+
         current_page_data = self.get_page(page, page_size)
 
         total_items = len(self.dataset())

@@ -37,8 +37,35 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
-        Get items for the given page number
-        """
+        Retrieve a specific page of items from the dataset.
+
+        This method fetches a subset of the dataset
+            corresponding to the given page number
+        and page size. It is useful for breaking down a large
+            dataset into smaller, more manageable pages.
+
+        Args:
+            page (int): The page number to retrieve. Must be a 
+            positive integer. Defaults to 1.
+            page_size (int): The number of items per page.
+                Must be a positive integer. Defaults to 10.
+
+        Returns:
+            List[List]: A list of lists, where each inner
+                list represents a row of data from
+            the dataset corresponding to the specified page.
+
+        Raises:
+            AssertionError: If the page or page_size
+                arguments are not positive integers.
+
+        Example:
+            If the dataset contains 100 items and you
+                request page 2 with a page_size of 10,
+            this method will return a list of items
+                from index 10 to 19.
+
+    """
         assert type(page) == int and type(page_size) == int
         assert page > 0 and page_size > 0
         startIndex, endIndex = self.index_range(page, page_size)

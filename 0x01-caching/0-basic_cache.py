@@ -9,6 +9,12 @@ BaseCaching = __import__("base_caching").BaseCaching
 
 
 class BasicCache(BaseCaching):
+    """
+    A basic cache implementaion class
+
+    Attributes:
+    MAX_ITEMS: number of items that can be store in the cache
+    """
 
     def __init__(self):
         """Initialize the BasicCache class."""

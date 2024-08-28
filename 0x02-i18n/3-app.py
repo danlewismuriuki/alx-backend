@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-A Basic flask application with localization
+A Basic flask application with localization function to parametrize
+    your templates. Use the message IDs home_title and home_header
 """
 from flask import Flask, render_template, request
 from flask_babel import Babel, _
@@ -8,7 +9,10 @@ from flask_babel import Babel, _
 
 class Config(object):
     """
-    Application configuration class
+    Application configuration class This class is used to define the
+        configuration settings for the Flask application,
+        particularly those related to localization and timezone
+            settings.
     """
     LANGUAGES = ['en', 'fr']
     BABEL_DEFAULT_LOCALE = 'en'

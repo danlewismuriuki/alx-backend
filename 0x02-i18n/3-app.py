@@ -31,7 +31,7 @@ babel = Babel(app)
 def get_locale() -> str:
     """
     Determine the best match for the user's preferred language
-    from the list of supported languages.
+    from the list   of supported languages.
 
     Returns:
         str: The best match locale.

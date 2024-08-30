@@ -2,8 +2,10 @@
 """
 A basic Flask application demonstrating localization with Flask-Babel.
 
-This application is configured to support multiple languages (English and French).
-It uses Babel to determine the user's preferred language and render the appropriate
+This application is configured to support multiple languages
+    (English and French).
+It uses Babel to determine the user's preferred language and
+    render the appropriate
 language in the templates.
 
 Usage:
@@ -71,7 +73,8 @@ if __name__ == '__main__':
     """
     Run the Flask application with debug mode enabled.
 
-    The application starts a Flask web server on localhost with debug mode enabled,
+    The application starts a Flask web server on localhost
+        with debug mode enabled,
     allowing you to view localization in action and develop interactively.
     """
     app.run(debug=True)

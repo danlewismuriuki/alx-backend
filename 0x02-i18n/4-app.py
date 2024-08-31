@@ -3,10 +3,8 @@
 A basic Flask application demonstrating localization with Flask-Babel.
 
 This application is configured to support multiple languages
-    (English and French).
-It uses Babel to determine the user's preferred language and
-    render the appropriate
-language in the templates.
+(English and French). It uses Babel to determine the user's
+preferred language and render the appropriate language in the templates.
 
 Usage:
     - Run this script to start the Flask server.
@@ -52,8 +50,7 @@ def get_locale() -> str:
     Returns:
         str: The best-matched locale string, such as 'en' or 'fr'.
     """
-    # Check if 'locale' parameter is in the request and is
-    # a supported language
+    # Check if 'locale' parameter is in the request and is a supported language
     locale = request.args.get('locale')
     if locale in app.config['LANGUAGES']:
         return locale
@@ -65,11 +62,11 @@ def index() -> str:
     """
     Render the home page with localized content.
 
-    This route handler renders the '3-index.html' template, which displays
+    This route handler renders the '4-index.html' template, which displays
     localized content based on the user's preferred language.
 
     Returns:
-        str: Rendered HTML template '3-index.html'.
+        str: Rendered HTML template '4-index.html'.
     """
     return render_template('4-index.html', get_locale=get_locale)
 
@@ -79,7 +76,7 @@ if __name__ == '__main__':
     Run the Flask application with debug mode enabled.
 
     The application starts a Flask web server on localhost
-        with debug mode enabled,
-    allowing you to view localization in action and develop interactively.
+    with debug mode enabled, allowing you to view localization in action
+    and develop interactively.
     """
     app.run(debug=True)

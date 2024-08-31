@@ -16,6 +16,7 @@ Usage:
 from flask import Flask, render_template, request
 from flask_babel import Babel, _
 from flask import g
+from typing import Union
 
 
 class Config(object):
@@ -49,7 +50,7 @@ users = {
 }
 
 
-def get_user(user_id):
+def get_user(user_id) -> Union[dict, None]:
     """
     Retrieve a user from the mock user table by user ID.
     """
@@ -87,7 +88,7 @@ def index() -> str:
     Returns:
         str: Rendered HTML template '3-index.html'.
     """
-    return render_template('3-index.html')
+    return render_template('5-index.html')
 
 
 @app.before_request

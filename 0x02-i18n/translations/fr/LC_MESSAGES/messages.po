@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-08-31 14:56+0300\n"
-"PO-Revision-Date: 2024-08-31 04:44+0300\n"
+"POT-Creation-Date: 2024-08-31 19:30+0300\n"
+"PO-Revision-Date: 2024-08-31 19:30+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Hello world"
 msgstr ""
 
-#: templates/3-index.html:6 templates/4-index.html:6
+#: templates/3-index.html:6 templates/4-index.html:6 templates/6-index.html:6
 msgid "home_title"
 msgstr ""
 
@@ -294,16 +294,20 @@ msgstr ""
 msgid "home_header"
 msgstr ""
 
-#: templates/4-index.html:9
+#: templates/4-index.html:9 templates/6-index.html:9
 msgid "Hello World!"
-msgstr "Bonjour le monde!"
+msgstr ""
 
 #: templates/5-index.html:11
 #, python-format
 msgid "You are logged in as %(username)s."
-msgstr "Vous êtes connecté en tant que %(username)s."
+msgstr ""
 
 #: templates/5-index.html:13
 msgid "You are not logged in."
-msgstr "Vous n'êtes pas connecté."
+msgstr ""
+
+#: templates/6-index.html:10
+msgid "You are logged in as spock"
+msgstr "vous êtes connecté en tant que spock"
 

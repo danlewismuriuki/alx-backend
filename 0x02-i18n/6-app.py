@@ -94,7 +94,7 @@ def index() -> str:
     Returns:
         str: Rendered HTML template '3-index.html'.
     """
-    return render_template('5-index.html')
+    return render_template('6-index.html')
 
 
 @app.before_request

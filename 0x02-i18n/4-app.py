@@ -71,7 +71,7 @@ def index() -> str:
     Returns:
         str: Rendered HTML template '3-index.html'.
     """
-    return render_template('3-index.html')
+    return render_template('4-index.html', get_locale=get_locale)
 
 
 if __name__ == '__main__':

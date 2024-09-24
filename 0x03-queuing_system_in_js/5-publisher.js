@@ -12,8 +12,18 @@ client.on('connect', (err, error) => {
 
 function publishMessage(message, time) {
     setTimeout(() => {
-        if (time === time(time)) {
-            console.log('About to send MESSAGE');
-        }
-    })
+        console.log('About to send MESSAGE');
+        client.publish('holberton school channel', message, (err, reply) => {
+            if (err) {
+                console.error(`Error publishing message: ${err}`);
+            } else {
+                console.log(`Message published: ${reply} subscribers received it.`);
+            }
+        });
+    }, time);
 };
+
+publishMessage("Holberton Student #1 starts course", 100);
+publishMessage("Holberton Student #2 starts course", 200);
+publishMessage("KILL_SERVER", 300);
+publishMessage("Holberton Student #3 starts course", 400);

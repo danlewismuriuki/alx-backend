@@ -1,0 +1,14 @@
+# Ignore node modules directory
+node_modules/
+
+# Ignore package lock file
+package-lock.json
+
+# Ignore package.json (optional, usually not recommended)
+package.json
+
+# Ignore Redis directory and files
+redis-6.0.10/
+redis-6.0.10.tar.gz
+redis-6.0.10.tar.gz.1
+

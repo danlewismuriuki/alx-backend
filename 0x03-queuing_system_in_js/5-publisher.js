@@ -11,7 +11,9 @@ client.on('connect', (err, error) => {
 });
 
 function publishMessage(message, time) {
-    if (time === time(time)) {
-        console.log('About to send MESSAGE');
-    }
+    setTimeout(() => {
+        if (time === time(time)) {
+            console.log('About to send MESSAGE');
+        }
+    })
 };
